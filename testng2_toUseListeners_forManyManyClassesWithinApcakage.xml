@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="listeners.TestNGListeners"></listener>
+		<!-- In above line you need to specify the "Listener Class" where you have defined TestNG listeners (methods) so all the 
+		classes located in "listeners" package (as specified in "<package name="listeners" />" below) tag will use those listeners 
+		(methods). -->
+	</listeners>
+
+
+	<test thread-count="5" name="Test">
+		<packages>
+			<package name="listeners" />
+		</packages>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

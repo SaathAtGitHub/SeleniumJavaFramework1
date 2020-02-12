@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">logs</Property>
+    </Properties>
+ 
+    <Appenders>
+        <RollingFile name="fileLogger" fileName="${basePath}/LogsForLog4jDemoDotJava1.log" filePattern="${basePath}/app-info-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+ 
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="demo" level="debug" additivity="true"> <!-- Here "demo" is your package name -->
+            <appender-ref ref="fileLogger" level="debug" />
+        </Logger>
+        <Root level="debug" additivity="false">
+            <appender-ref ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
+
+ <!-- Below file is created by referring Raghav Pal's this video: “Selenium Framework for Beginners 15 | How to add Log4j xml file in Java project” located at https://www.youtube.com/watch?v=5B-txfxe8lw&list=PLhW3qG5bs-L8oRay6qeS70vJYZ3SBQnFa&index=17
+ As suggested by Raghav @ 2:46 in above video, I googled “log4j2.xml file example” > click the first link which will 
+ take you to https://howtodoinjava.com/log4j2/log4j-2-xml-configuration-example/. From there find “3. log4j2.xml for logging into rolling files” and then I copied the 
+ XML contents here. --> 

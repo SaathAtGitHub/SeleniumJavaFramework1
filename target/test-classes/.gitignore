@@ -1,0 +1,23 @@
+/BrowserTest.class
+/Chrome_RunningTestOnChromeWithChromeDriver.class
+/Chrome_RunningTestsOnChromeUsingEnvVariable_PathOfChromeDriverFolderSetAsEnvVariable.class
+/CrossBrowserTestingUsingPropertiesFile.class
+/DesiredCapabilities_Demo.class
+/DesiredCapabilities_for_IE_1_XXXX.class
+/DesiredCapabilities_for_IE_XXXX.class
+/ExplicitWaitForAparticularWebElement_UsingWebDriverWaitObject.class
+/Firefox_RunningTestOnFirefoxWithGeckoDriver.class
+/IE_RunningTestOnIEWithInternetExplorerDriver.class
+/ImplicitWait_Example.class
+/P.class
+/PathOfCurrentProjectUsing_SystemGetPropertyNUserDotDir.class
+/SendKeys_withTextEntryAndHittingEnterKey.class
+/WebElements_P.class
+/config/
+/demo/
+/interview/
+/listeners/
+/pages/
+/test/
+/utils/
+/AutoIT Scripts/

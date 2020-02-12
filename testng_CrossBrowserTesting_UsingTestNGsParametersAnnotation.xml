@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- /* "CrossBrowserTesting_UsingTestNGsParametersAnnotation.java" file is linked with this XML file. Run this XML file by right-clicking on it > Run As > TestNG Suite. 
+ * I created this file while I watched this video upto  9:10: "Selenium Framework for Beginners 22 | Selenium TestNG | How to do Multiple Browser Parallel Testing" located
+ * at https://www.youtube.com/watch?v=WZfh6v53leA&list=PLhW3qG5bs-L8oRay6qeS70vJYZ3SBQnFa&index=24
+ */ -->
+ 
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  
+  <parameter name="browserName" value="firefox"></parameter> 
+  <!--  Above you need to specify the parameter that you wish to use in your .java / test file. -->
+  
+    <classes>
+      <class name="interview.CrossBrowserTesting_UsingTestNGsParametersAnnotation"/> 
+      <!--  Here u need to specify the test / .java file in which you will use @Parameters annotation by writing 
+      "@Parameters("browserName")" annotation before the method that will be using "browserName" parameter.   -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

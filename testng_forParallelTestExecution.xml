@@ -1,0 +1,28 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"> -->
+<suite thread-count="3" name="Suite1" parallel="classes">
+	<test name="Test1">
+		<classes>
+			<class name="test.TestNG_Demo" />
+			<method>
+				<exclude name="googleSearch"></exclude>
+			</method>
+			<class name="test.TestNG_Demo2">
+				<method>
+					<include name="googleSearch3"></include>
+				</method>
+			</class>
+		</classes>
+	</test> <!-- Test1 -->
+</suite> <!-- Suite1 -->
+
+<!-- 
+Classes, methods, @Tests from following files are used in this <testng.xml>:
+TestNG_Demo.java (This file was already created but it is used in this video)
+TestNG_Demo2.java
+
+TEST RESULT: 
+I ran this XML file successfully and it ran above 2 tests (TestNG_Demo.java and TestNG_Demo2) parallelly and successfully.
+
+ * I've created this file by by following steps explained @ 9:02, in this video: "Selenium Framework for Beginners 9 | What is TestNG | How to install TestNG for Selenium" located
+ * at https://www.youtube.com/watch?v=AzVyetnW3hU&list=PLhW3qG5bs-L8oRay6qeS70vJYZ3SBQnFa&index=10
+-->
