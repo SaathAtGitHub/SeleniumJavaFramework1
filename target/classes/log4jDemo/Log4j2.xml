@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+
+		<Properties>
+			<Property name="basePath">./logs/</Property>
+		</Properties>
+
+		<RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+			<SizeBasedTriggeringPolicy size="500" />
+		</RollingFile>
+
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+
+		<Logger name="Log4jDemo1" level="trace" additivity="false">
+			<!-- As the lady asked @ 1:01:13 the <Logger> tag is applied to individual 
+				package so here all the class / .java files within "Log4jDemo1" package will 
+				only log ERRORS. Replaced level="trace" to level="error" so that only ERRORS 
+				will be reported to the log for Log4jDemo2.java -->
+			<AppenderRef ref="File" />
+		</Logger>
+
+		<Root level="error"> <!-- As the lady asked @ 1:01:13 the Root tag is applied to the whole project 
+				so here Root level is ERROR meaning all the errors in the whole project will 
+				be reported / printed as said @ 1:00:48. Here I replaced "error" with "trace" 
+				..meaning "trace" will print every level of loggers while keeping "error" 
+				there means error won't be printed in the log. -->
+			<AppenderRef ref="File" />
+		</Root>
+	</Loggers>
+</Configuration>
+
+<!-- Content of this XML file is copied from https://logging.apache.org/log4j/2.x/manual/configuration.html -->
+<!-- I created this XML file while I watched "Log4j Tutorial- Selenium WebDriver- 
+	Java" video located at https://www.youtube.com/watch?v=_1hIb2cujZE -->
